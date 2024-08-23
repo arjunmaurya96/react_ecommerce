@@ -1,0 +1,77 @@
+.newcollections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-area: 10px;
+ 
+    margin: 20px 100px 100px 100px; /* Sets margin-top: 20px, margin-right: 100px, margin-bottom: 150px, margin-left: 100px */
+}
+
+.newcollections h1 {
+    color: #171717;
+    font-size: 50px;
+    font-weight: 600;
+    text-align: center; /* Center-aligns the heading text */
+}
+
+.newcollections hr {
+    width: 200px;
+    height: 6px;
+    border-radius: 20px;
+    background: #252525;
+    margin: 10px auto;
+}
+
+.newcollections-item {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 1px; /* Adds a 1px gap between items */
+    width: calc(100% - 200px); /* Adjusts the width to account for the left and right margins */
+    padding: 0 10px; /* Adds padding to avoid edge clipping */
+}
+
+.newcollections-item img {
+    width: 100%; /* Makes images responsive */
+    height: auto;
+    border-radius: 5px; /* Set border-radius to 5px */
+    margin: 0; /* Removes margin so the gap is consistent */
+    object-fit: cover;
+}
+
+.collections {
+    margin: 0 100px 0 130px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 30px; /* Adds a 30px gap between grid items */
+    margin-top: 50px;
+}
+
+@media (max-width: 1024px) {
+    .collections {
+        grid-template-columns: 1fr 1fr 1fr; /* Adjusts to 3 columns */
+    }
+}
+
+@media (max-width: 768px) {
+    .collections {
+        grid-template-columns: 1fr 1fr; /* Adjusts to 2 columns */
+    }
+}
+
+@media (max-width: 480px) {
+    .collections {
+        grid-template-columns: 1fr; /* Adjusts to 1 column */
+    }
+
+    .newcollections h1 {
+        font-size: 36px; /* Smaller font size for smaller screens */
+    }
+
+    .newcollections-item {
+        flex-direction: column; /* Stack items in a column on small screens */
+    }
+}
